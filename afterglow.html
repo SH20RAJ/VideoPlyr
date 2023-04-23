@@ -14,7 +14,7 @@ html, body {
   height: 100%;
 }
 </style>
-<video class="afterglow" id="myvideo" width="1280" height="720" data-skin="dark" poster="https://sh20raj.github.io/Sopplayer/sample.png">
+<video class="afterglow" id="my-video" width="1280" height="720" data-skin="dark" poster="https://sh20raj.github.io/Sopplayer/sample.png">
         <source type="video/mp4" src="https://bit.ly/bbsamplevideo" />
     </video>
 
@@ -23,12 +23,12 @@ html, body {
   let apikey = 'AIzaSyD739-eb6NzS_KbVJq1K8ZAxnrMfkIqPyw';
   function getparam(a,e){return e||(e=window.location.href),new URL(e).searchParams.get(a)}
 
-  let video = document.getElementById('myvideo');
+  let video = videojs('my-video')
   if(getparam('id')){
     let json = JSON.parse(atob(getparam('id'))) ;
     let driveid = json.id;
-    video.src = driveid;
-    video.poster = json.posterurl;
+    video.src(json.id);
+    video.poster_ = json.poster;
   }
 </script>
 
