@@ -1,0 +1,8 @@
+<video src="https://sample-videos.com/video123/mp4/720/big_buck_bunny_720p_1mb.mp4" controls></video>
+
+https://sample-videos.com/video123/mp4/720/big_buck_bunny_720p_1mb.mp4
+
+
+<video src="your-video-url.mp4" poster="https://dummyimage.com/600x400/000/fff&text=Sample+Poster" controls></video>
+
+https://dummyimage.com/600x400/000/fff&text=Sample+Poster

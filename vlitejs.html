@@ -1,5 +1,21 @@
+<link rel="icon" href="drive-logo.png">
 <link href="https://cdn.jsdelivr.net/npm/vlitejs@4/dist/vlite.css" rel="stylesheet" />
+<style>
+  html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
 
+.v-vlite {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+</style>
 
 <video poster="https://bit.ly/bbsampleposter" height="100%" width="100%" id="player" class="vlite-js" src="https://bit.ly/bbsamplevideo"></video>
 
@@ -15,8 +31,8 @@
   if(getparam('id')){
     let json = JSON.parse(atob(getparam('id'))) ;
     let driveid = json.id;
-    video.src = `https://www.googleapis.com/drive/v3/files/${driveid }?alt=media&key=${apikey}`;
-    video.poster = 'https://lh3.googleusercontent.com/d/'+driveid;
+    video.src = driveid;
+    video.poster = json.posterurl;
   }
 </script>
 
