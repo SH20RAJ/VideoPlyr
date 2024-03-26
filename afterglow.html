@@ -18,8 +18,14 @@
   if(getparam('id')){
     let json = JSON.parse(atob(getparam('id'))) ;
     let driveid = json.id;
-    video.src(json.id);
-    video.poster_ = json.poster;
+       document.getElementById('my-video').src([
+			{type: "video/mp4", src: driveid},
+			{type: "rtmp/mp4", src: driveid}
+		]);
+       document.getElementById('my-video').poster_ = json.poster ;
+
+    // video.src(json.id);
+    // video.poster_ = json.poster;
   }
 </script>
 
